@@ -1,0 +1,55 @@
+﻿@model IEnumerable<CategoryCourseVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main id="main"class="main">
+    <div class="container mt-5" >
+        <h2 class="text-center">Categories</h2>
+        <div class="create-operations ">
+            <a asp-action="Create" class="btn btn-success text-white  mt-2"><i class="fa-solid fa-plus"></i></a>
+        </div>
+        <table class="table table-dark">
+            <thead >
+                <tr >
+                   
+                    <th scope="col"style="background-color:white;color:black">Category</th>
+                    <th scope="col" style="background-color:white;color:black">Description</th>
+                    <th scope="col" style="background-color:white;color:black">Created date</th>
+                    <th scope="col" style="background-color:white;color:black">Course count</th>
+                    <th scope="col" style="background-color:white;color:black">Operations</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="category-data">
+                    
+                    <td>@item.CategoryName</td>
+                    <td>@item.CategoryDescription</td>
+                    <td>@item.CreatedDate</td>
+                    <td>@item.CourseCount</td>
+                    <td>
+                        <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-primary text-white btn-sm"><i class="fa-solid fa-circle-info"></i></a>
+                        <a class="btn btn-warning text-white btn-sm"asp-action="Edit" asp-route-id="@item.Id"><i class="fa-solid fa-pen"></i></a>
+                       <form class="d-inline" method="post" asp-action="Delete" asp-route-id="@item.Id">
+                                <button type ="submit" class="btn btn-danger text-white btn-sm"><i class="fa-solid fa-trash"></i></button>
+                       </form>
+                            <a class="btn btn-secondary text-white btn-sm add-archive" data-id="@item.Id"><i class="bi bi-archive"></i></a>
+                                
+                            
+                    </td>
+
+                </tr>
+                    
+                }
+         
+
+            </tbody>
+        </table>
+
+
+    </div>
+</main>
+

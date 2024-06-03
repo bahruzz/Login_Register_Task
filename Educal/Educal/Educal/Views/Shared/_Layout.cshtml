@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educal</title>
+    <link rel="stylesheet" href="~/assets/css/bootstrapt.css">
+    <link rel="stylesheet" href="~/assets/css/home.css">
+  
+</head>
+
+ <body>
+    
+
+    @await Component.InvokeAsync("Header");
+
+            @RenderBody()
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex">
+                    <div class="col-8">
+                        <h1>You can be your own</h1>
+                        <h1>Guiding star with our help</h1>
+                    </div>
+                    <div class="col-4 d-flex justify-content-end align-items-center">
+                        <img src="~/assets/images/cta-shape.png" alt="">
+                        <button class="btn btn-light">Get started</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-3 mt-5">
+                    <img src="~/assets/images/logo-2.png" alt="">
+                    <p class="mt-5">Great lesson ideas and lesson plans for ESL teachers! Educators can customize lesson plans to best.</p>
+                    <div class="d-flex">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <ul style="list-style: none;">
+                        <li style="font-size: 30px; color: #fff;">Company</li>
+                        <li>About</li>
+                        <li>Courses</li>
+                        <li>Events</li>
+                        <li>Instructor</li>
+                        <li>Career</li>
+                        <li>Become a Teacher</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul style="list-style: none;">
+                        <li style="font-size: 30px; color: #fff;">Platform</li>
+                        <li>Browse Library</li>
+                        <li>Library</li>
+                        <li>Partners</li>
+                        <li>News & Blogs</li>
+                        <li>FAQs</li>
+                        <li>Tutorials</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <div class="footer_subscribe_form">
+                        <h4 style="color: #fff;">Subscribe</h4>
+                        <form action="#" class="d-flex mb-4 subs align-items-center">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">
+                                <i class="fas fa-arrow-right "></i>
+                            </button>
+                        </form>
+                        <p>Get the latest news and updates right at your inbox.</p>
+                    </div>
+                    <div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p style="font-size: 14px;
+                color: #83848a;
+                margin-bottom: 0;">© 2022 Educal, All Rights Reserved. Design By <a style="color: #fff;">Theme Pure</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/9cd2072b0c.js" crossorigin="anonymous"></script>
+    <script src="~/assets/js/home.js"></script>
+  </body>
+
+</html>

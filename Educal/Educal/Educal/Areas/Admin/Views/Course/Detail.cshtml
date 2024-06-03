@@ -1,0 +1,29 @@
+﻿@model CourseDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div id="main" class="main" style="background-color:blueviolet">
+
+
+    <div class="container mt-5" style="color:white">
+        <h1 class=" text-center" style="color:white">Product detail</h1>
+        <div class="images mt-3">
+            @foreach (var item in Model.Images)
+            {
+                <img src="~/assets/images/@item.Image" style="width: 150px;height:150 px;@(item.Ismain ? "border:5px solid red;" : "")" />
+            }
+        </div>
+        <div class="product-info">
+            <h3>Name:@Model.Name</h3>
+           
+            <h4>Price:@Model.Price</h4>
+            <h2>Category:@Model.Category</h2>
+
+        </div>
+        <a asp-action="Index" class="btn btn-success mt-2">Back</a>
+    </div>
+
+
+</div>
+
